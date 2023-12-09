@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # from streamlit_chat import message
 from langchain.memory import ConversationBufferMemory
@@ -10,13 +10,11 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 
 
-load_dotenv()
+# load_dotenv()
 # openai_api_key = os.getenv('OPENAI_API_KEY')
 
+openai_api_key = os.environ.get('OPENAI_API_KEY') 
 
-openai_api_key = os.environ.get('OPENAI_API_KEY')  # 하드코딩 X
-openai_api_key = "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"
-print(openai_api_key)
 # load vectorestore(faiss_index)
 @st.cache_resource(show_spinner=False)
 def load_vectorstore(data_dir):
