@@ -1,0 +1,11 @@
+streamlit
+langchain
+tiktoken
+openai
+tqdm
+openpyxl
+pypdf
+sentence-transformers
+faiss-cpu
+python-dotenv
+watchdog
